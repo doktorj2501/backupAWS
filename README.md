@@ -6,8 +6,6 @@
 #There is also a way to use AWS-CLI to pull the volume ID of the native or any other instance                                                         
 #Also, this script is self-pruning, to cut AWS storage costs. That means,                          
 #It deletes the oldest backup before making a new one.                               
-#Even if the create snapshot fails to fire, it will only delete the 5th oldest backup before that.                                
-#After that, it will have no 5th oldest backup to delete, but it will still attempt to make a new snapshot.                           
 #Currently, this is set for one business week. (obs_iter = ($iter-4))                             
 #The way it sits, last Tuesday's backup of last Monday's work gets replaced by this Tuesday's                          
 #backup of this Monday's work, and so on throught the week.                                           
